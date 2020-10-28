@@ -7,15 +7,15 @@ class Particle {
   constructor(){
     this.x = random(0,width);
     this.y = random(0,height);
-    this.r = random(1,8);
+    this.r = random(1,50);
     this.xSpeed = random(-2,2);
     this.ySpeed = random(-1,1.5);
   }
 
 // creation of a particle.
   createParticle() {
-    noStroke(90);
-    fill('rgba(200,169,169,60)');
+    noStroke(800);
+    fill('rgba(20,10,19,80)');
     circle(this.x,this.y,this.r);
   }
 
@@ -34,8 +34,8 @@ class Particle {
   joinParticles(particles) {
     particles.forEach(element =>{
       let dis = dist(this.x,this.y,element.x,element.y);
-      if(dis<85) {
-        stroke('rgba(255,255,255,20)');
+      if(dis<280) {
+        stroke('rgba(255,5,255,2)');
         line(this.x,this.y,element.x,element.y);
       }
     });
