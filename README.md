@@ -21,11 +21,11 @@ function draw() {
 
       // each particle moves in a circle
       const myX = x + 90 * cos(6 * PI * t + angle);
-      const myY = y + 9 * sin(2 * PI * t + angle);
+      const myY = y + 120 * sin(2 * PI * t + angle);
 
-      ellipse(myX, myY, 1); // draw particle
+      ellipse(myX, myY, 2.3); // draw particle
     }
   }
 
-  t = t + 0.03; // update time
+  t = t + 0.003; // update time
 }
